@@ -20,8 +20,14 @@ console.log(Filtered)
 
 console.log("------------3) sort()------------")
 let Sorting = products.sort((ele1, ele2) => {
-    return ele1.price - ele2.price
-}).map(ele => ele.name)
+    if(ele1.price > ele2.price){
+        return 1
+    }
+    else if(ele1.price < ele2.price){
+        return -1
+    }
+    return 0
+}).map((ele) => ele.name).join(", ")
 console.log(Sorting)
 
 console.log("------------4) forEach()------------")
