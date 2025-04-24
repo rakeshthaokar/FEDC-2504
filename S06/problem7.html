@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <style>
+        .container {
+            border: 2px solid;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        section {
+            border: 2px solid;
+            border-radius: 20px;
+            margin: 20px;
+        }
+        .left-first ,.left-third{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            border: 2px solid;
+            border-radius: 20px;
+            margin: 20px;
+        }
+        .left-second{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        .left>div>div{
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .right>div{
+            margin: 10px 15px;
+            width: 400px;
+        }
+        img{
+            max-width: 100%;
+        }
+        .left img{
+            border-radius: 50%;
+        }
+        .right img{
+            border-radius: 20px;
+        }
+        @media all and (max-width: 1024px){
+            .container{
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <section class="left">
+            <div class="left-first">
+                <div><img src="https://fastly.picsum.photos/id/981/200/200.jpg?hmac=LRIdIKhx3zHhDGgKVGHBdRjNRrgVbpWUw02O7Uuy2C4" alt="img"></div>
+                <div><img src="https://fastly.picsum.photos/id/1079/200/200.jpg?hmac=1ufYwVqTHDtGZw0aD-rsTU5gv74qWxm5-k7xQYkSeig" alt="img"></div>
+                <div><img src="https://fastly.picsum.photos/id/935/200/200.jpg?hmac=WNkIQ-NNhosb-4Qfz8Tixwp7-HVS540Z2dS0VDyJ5ac" alt="img"></div>
+                <div><img src="https://fastly.picsum.photos/id/477/200/200.jpg?hmac=pGA68LBET23UPGB7L8xL1pA7PYT_x7JazGX__CnlliU" alt="img"></div>
+                <div><img src="https://fastly.picsum.photos/id/32/200/200.jpg?hmac=O33StVyZ6hc7IKBGYYxg-q1uv2_GimqYake6LB-EieE" alt="img"></div>
+                <div><img src="https://fastly.picsum.photos/id/931/200/200.jpg?hmac=htOesDJIBiVYN2fj1J6jQqQC-qu81A24bW_tcpe5Hxg" alt="img"></div>
+            </div>
+            <div class="left-second">
+                <div><img src="https://fastly.picsum.photos/id/921/200/200.jpg?hmac=6pwJUhec4NqIAFxrha-8WXGa8yI1pJXKEYCWMSHroSU" alt="img"></div>
+                <div><img src="https://fastly.picsum.photos/id/907/200/200.jpg?hmac=SdeLZNONJ3CX-OB15hSXsCheWDC6yYac5N5VUJM7FIQ" alt="img"></div>
+                <div><img src="https://fastly.picsum.photos/id/404/200/200.jpg?hmac=7TesL9jR4uM2T_rW-vLbBjqvfeR37MJKTYA4TV-giwo" alt="img"></div>
+            </div>
+            <div class="left-third">
+                <div><img src="https://fastly.picsum.photos/id/945/200/200.jpg?hmac=_7D53GpdtYZnR2d9KUdpkiRzfoDmIumI1MP65WM2l-w" alt="img"></div>
+                <div><img src="https://fastly.picsum.photos/id/371/200/200.jpg?hmac=VShu_HdkBA6-hi8lkHlFMbkqxiu0BgA4mvEKoJke228" alt="img"></div>
+                <div><img src="https://fastly.picsum.photos/id/67/200/200.jpg?hmac=sN5XCCMqqmBvgDbYmAowWy2VToCkSYP5igDL_iRxK3M" alt="img"></div>
+                <div><img src="https://fastly.picsum.photos/id/1025/200/200.jpg?hmac=lPP7DRqIRSrMTmBMEg5NbVzguwqQQs2meA5kSrgLAhc" alt="img"></div>
+                <div><img src="https://fastly.picsum.photos/id/344/200/200.jpg?hmac=VNTdN95obd1fhoO6M8Pw3vxCOWmCrUPGGqavLT9ewl8" alt="img"></div>
+                <div><img src="https://fastly.picsum.photos/id/682/200/200.jpg?hmac=098XkPnTe9a41I6BtB9xV4t6L8c3ESkdowMLElFBR5A" alt="img"></div>
+            </div>
+        </section>
+        <section class="right">
+            <div><img src="https://fastly.picsum.photos/id/87/536/354.jpg?hmac=vbC5y7DIze_jCRPV3AzYdCC5F_f2YAQ-nqBuii7ZSZY" alt="img"></div>
+            <div><img src="https://picsum.photos/id/237/536/354" alt="img"></div>
+            <div><img src="https://picsum.photos/seed/picsum/536/354" alt="img"></div>
+            <div><img src="https://picsum.photos/id/1084/536/354?grayscale" alt="img"></div>
+        </section>
+    </main>
+</body>
+
+</html>
