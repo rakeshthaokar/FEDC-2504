@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Submission</title>
+</head>
+<body>
+
+  <header>
+    <h1>Submit Your Blog</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Blog Submission Form</h2>
+
+      <form>
+        <article>
+          <label for="title">Blog Title</label>
+          <input type="text" aria-required="true"/><br><br>
+
+          <label for="category">Category</label>
+          <select id="category" name="category" aria-checked="true">
+            <option value="">Select Category</option>
+            <option value="technology">Technology</option>
+            <option value="lifestyle">Lifestyle</option>
+            <option value="travel">Travel</option>
+            <option value="education">Education</option>
+          </select><br><br>
+
+          <label for="content">Blog Content</label><br>
+          <textarea name="content" rows="5" cols="100"></textarea><br><br>
+
+          <label for="author">Author Name</label>
+          <input type="text" name="author" /><br><br>
+
+          <fieldset>
+            <legend>Publication Status</legend>
+            <input type="radio" id="draft" name="status" />
+            <label for="draft">Draft</label><br/><br>
+
+            <input type="radio" id="published" name="status" />
+            <label for="published">Published</label>
+          </fieldset>
+
+          <label for="terms">
+            <input type="checkbox"name="terms" />
+            I agree to the terms and conditions
+          </label><br><br>
+
+          <button>Submit Blog</button><br><br>
+        </article>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 MyBlogCMS. All rights reserved.
+  </footer>
+
+</body>
+</html>
