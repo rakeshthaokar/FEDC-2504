@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">Hello DOM</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus odit nisi, aut nulla officia nam error
+        accusantium ea facere aliquam laborum nihil omnis amet illum deleniti maiores esse nemo delectus!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus odit nisi, aut nulla officia nam error
+        accusantium ea facere aliquam laborum nihil omnis amet illum deleniti maiores esse nemo delectus!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus odit nisi, aut nulla officia nam error
+        accusantium ea facere aliquam laborum nihil omnis amet illum deleniti maiores esse nemo delectus!</p>
+    <div class="container">box1</div>
+    <div class="container">box2</div>
+</body>
+
+</html>
+<script>
+    let head = document.getElementById("heading")
+    head.textContent = "Welcome to the DOM World!"
+
+    let allPara = document.getElementsByTagName("p")
+    console.log(allPara);
+    for (let i = 0; i < allPara.length; i++) {
+        allPara[i].style.color = "blue"
+    }
+
+    let firstBox = document.querySelector(".container")
+    firstBox.style.backgroundColor = "yellow" 
+
+</script>
