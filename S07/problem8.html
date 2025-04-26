@@ -37,9 +37,9 @@
 
     btnColor.addEventListener('click', function () {
         let color = InputColor.value.trim()
+        console.log(InputColor)
         const abcd = new Option().style
-        abcd.color = color
-        if (color === "" || abcd.color === "") {
+        if (color === "" || abcd === "") {
             alert("Invalid color name!")
         } else {
             TextBox.style.backgroundColor = color
