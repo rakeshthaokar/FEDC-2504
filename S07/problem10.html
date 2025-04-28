@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        .box{
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="name" type="text" placeholder="Enter the User's name"><br><br>
+    <input id="color" type="text" placeholder="Enter a background color"><br><br>
+    <button class="change">Save Preferences</button>
+    <button class="reset">Reset</button><br><br>
+    <div class="box"></div>
+</body>
+
+</html>
+<script>
+    let name = document.querySelector("#name")
+    let bgcolor = document.querySelector("#color")
+    let savebtn = document.querySelector(".change")
+    let message = document.querySelector(".box")
+    let body = document.querySelector("body")
+    let resetbtn = document.querySelector(".reset")
+
+    window.addEventListener("DOMContentLoaded", () => {
+        localStorage.getItem("UserName")
+        localStorage.getItem("bgColor")
+
+        message.textContent = localStorage.getItem("UserName")
+        body.style.backgroundColor = localStorage.getItem("bgColor")
+    })
+
+    savebtn.addEventListener('click', update)
+    function update(){
+        let displayName = name.value.trim()
+        if(displayName === ""){
+            alert("Please enter your name!")
+        }
+        else{
+            message.textContent = `Welcome, ${name.value.trim()}!`
+        }
+
+        let displayColor = bgcolor.value.trim()
+        const optionColor = new Option().style
+        optionColor.color = displayColor
+        if(displayColor === "" || optionColor.color === ""){
+            alert("Please enter a background color!")
+        }
+        else{
+            body.style.backgroundColor = displayColor
+        }
+        localStorage.setItem("UserName",message.textContent)
+        localStorage.setItem("bgColor",body.style.backgroundColor)
+    }
+
+    resetbtn.addEventListener('click', resetAll)
+    function resetAll(){
+        localStorage.clear()
+        name.value = ""
+        bgcolor.value = ""
+        body.style.backgroundColor = "white"
+        message.textContent = ""
+    }
+</script>
